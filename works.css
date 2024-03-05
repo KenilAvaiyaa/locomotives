@@ -1,11 +1,22 @@
 @font-face {
     font-family: main;
-    src: url(../locomotives/Freight_Big_Pro/Freight\ Big\ Pro\ Medium.ttf);
+    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light.ttf);
+}
+
+@font-face {
+    font-family: mainli;
+    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light.ttf);
+}
+
+
+@font-face {
+    font-family: mainit;
+    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light\ Italic.ttf);
 }
 
 @font-face {
     font-family: light;
-    src: url(../locomotives/Freight_Big_Pro/Freight\ Big\ Pro\ Light.ttf);
+    src: url(../locomotives/fonts/nav-font/NHaasGroteskTXPro-55Rg.ttf);
 }
 
 * {
@@ -18,39 +29,222 @@ html,body{
     width : 100%;
 }   
 
-.page1{
+
+/* loder page */
+
+
+
+.loder{
     height: 100vh;
-    width: 100vw;
-    background-color: #F5E41B;
+    width: 100%;
+    background-color: black;
+    z-index: 8;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.background{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #F5E41B;
+    z-index: 10;
+}
+
+.loder video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover ;
+    z-index: 8;
+}
+
+
+.loder h1{
+    position: absolute ;
+    font-family: main;
+    color: white;
+    font-size: 7vw;
+    font-weight: 300;
+    line-height: 5vw;
+    text-align: center;
+    letter-spacing: -3px;
+    z-index: 9;
+}
+
+.loder em{
+    font-family: mainit;
+}
+
+/* navbar */
+
+
 nav {
+    position: absolute;
     height: 10%;
     width: 100%;
-    padding: 2vh 3vw;
+    padding: 1vh 3vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 8;
+
 }
 
 .logo svg{
     height: 4vmax;
     width: 7vmax;
+    fill:#ffffff
 }
 
 nav .menu{
-    background-color: aliceblue;
     width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* z-index: ; */
 }
 
 .menu a{
     font-family: light;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 100;
+    color:white;
 }
 
+.menu i{
+    font-size: 2vw;
+    color: white;
+}
+
+.ri-add-line {
+    display: none;
+}
+
+/* page1 of site */
+
+
+.page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5E41B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page1 h1{
+    font-family: main;
+    font-size: 7vw;
+    font-weight: 300;
+    line-height: 5vw;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.page1 em{
+    font-family: mainit;
+}
+
+
+
+
+@media (max-width:600px) {
+    
+
+.loder h1{
+    position: absolute ;
+    font-family: mainli;
+    color: white;
+    font-size: 5.5vh;
+    font-weight: 300;
+    line-height: 4vh;
+    text-align: center;
+    letter-spacing: -3px;
+    z-index: 9;
+    padding: 60px 30px;
+}
+
+.loder em{
+    font-family: mainit;
+}
+
+
+
+/* navbar */
+nav {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    padding: 1vh 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+
+}
+
+.logo svg{
+    height: 5vmax;
+    width: 7vmax;
+    fill:#ffffff
+}
+
+nav .menu{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* z-index: ; */
+}
+
+.menu a{
+    display: none;
+}
+
+.menu i{
+    font-size: 5vw;
+    color: white;
+}
+
+
+.ri-add-line {
+    display: block;
+}
+
+.ri-close-large-line {
+    display: none;
+}
+
+
+/* page1 of site */
+
+
+.page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5E41B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page1 h1{
+    padding: 60px 30px;
+    font-family: mainli;
+    font-size: 5.5vh;
+    /* font-weight: 100; */
+    line-height: 4vh;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.page1 em{
+    font-family: mainit;
+}
+
+}
