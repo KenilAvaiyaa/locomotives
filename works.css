@@ -1,0 +1,56 @@
+@font-face {
+    font-family: main;
+    src: url(../locomotives/Freight_Big_Pro/Freight\ Big\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../locomotives/Freight_Big_Pro/Freight\ Big\ Pro\ Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width : 100%;
+}   
+
+.page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F5E41B;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    padding: 2vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo svg{
+    height: 4vmax;
+    width: 7vmax;
+}
+
+nav .menu{
+    background-color: aliceblue;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a{
+    font-family: light;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 100;
+}
+
