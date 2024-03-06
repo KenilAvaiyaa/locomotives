@@ -303,11 +303,108 @@ nav .menu {
 
 
 .page3 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
+    background-color: #ec6262;
+    padding: 30px 28px;
+    display: flex;
+}
 
-    background-color: #ffffff;
+.img_container{
+    /* background-color: #ae2222; */
+    width: 33%;
+    margin-right: 1vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 
+}
+.img_container1{
+    /* background-color: #ec0c0c; */
+    width: 33%;
+    margin-right: 1vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.img_container2{
+    /* background-color: #a34747; */
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.imgall{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imgall img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.overlay{
+    position: absolute;
+     height: 100%;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.overlay p{
+    font-family: "mainfont";
+    font-size: 4vw;
+    line-height: 3vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+
+
+.imagebox{
+    height: 550px;
+    width: 443px;
+    background-color: #F5E41B;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.imagebox1{
+    position: relative;
+    height: 450px;
+    width: 443px;
+    background-color: #F5E41B;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 28px;
+}
+
+.imagebox2{
+    position: relative;
+    height: 320px;
+    width: 443px;
+    background-color: #F5E41B;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 28px;
 }
 
 
@@ -315,6 +412,12 @@ nav .menu {
 
 
 
+.page4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ae2222;
+    padding: 30px 28px;
+}
 
 
 
