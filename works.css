@@ -121,7 +121,9 @@ nav .menu {
 }
 
 
-
+.main{
+    background-color: #F5E41B;
+}
 
 
 
@@ -185,10 +187,104 @@ nav .menu {
 .page2 {
     height: 100vh;
     width: 100%;
-    /* position:relative; */
     background-color: #000000;
-
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
+
+.elem {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elem .blur{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 25%;
+    background: rgb(245,228,27);
+    background: radial-gradient(circle, rgba(245,228,27,1) 0%, rgba(240,224,29,1) 76%, transparent(5,12,150,1) 100%);
+    /* box-shadow: 10px 0px 20px 20px #F5E41B,-10px 0px 20px 20px #F5E41B; */
+    z-index: 8;
+    border-radius: 50px;
+    filter: blur(5px);
+}
+
+.elem h1{
+    font-family: "mainfont";
+    font-weight: 300;
+    position: relative;
+    z-index:9;
+    text-transform: uppercase;
+    font-size: 7vw;
+    line-height: 6vw;
+}
+
+.elem:hover h1{
+    cursor: pointer;
+    font-family: "mainfont_it";
+    color: #000000;
+}
+
+.elem .move{
+    padding: 5px 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%) scaleY(0) ;
+    white-space: nowrap;
+    transition: all ease 0.5s;
+    background-color: #F5E41B;
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+
+.elem:hover .move{
+    transform: translate(0, -50%) scaleY(1);
+    opacity: 1;
+}
+
+@keyframes movelopp {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+.elem .move .move_text{
+    white-space: nowrap;
+    display: inline-block;
+    animation: movelopp 6s infinite;
+    animation-timing-function: linear;
+}
+
+.elem .move .move_text h4{
+    margin-left: 1.5vw;
+    font-size: 1vw;
+    color: #000000;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "nav_font";
+}
+
+
+
+
+
+
 
 
 
