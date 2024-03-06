@@ -303,13 +303,14 @@ nav .menu {
 
 
 .page3 {
-    min-height: 100vh;
+    height: auto !important;
     width: 100%;
-    background-color: #ec6262;
+    background-color: #dfdfdf;
     padding: 30px 28px;
+}
+.hero{
     display: flex;
 }
-
 .img_container{
     /* background-color: #ae2222; */
     width: 33%;
@@ -345,11 +346,14 @@ nav .menu {
     background-position: center;
     overflow: hidden;
     cursor: pointer;
+    /* transition: all ease 0.5s; */
 }
 
 .imgall img{
     height: 100%;
     width: 100%;
+    transition: all ease 0.5s;
+
 }
 
 
@@ -358,11 +362,13 @@ nav .menu {
     position: absolute;
      height: 100%;
     width: 100%;
+    z-index: 9;
     background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transition: all ease 0.5s;
 }
 
 .overlay p{
@@ -374,13 +380,21 @@ nav .menu {
     text-align: center;
 }
 
+.overlay:hover{
+    opacity: 1;
+}
+
+.imgall:hover img{
+    scale:1.2;
+}
+
 
 
 
 .imagebox{
     height: 550px;
     width: 443px;
-    background-color: #F5E41B;
+    /* background-color: #F5E41B; */
     object-fit: cover;
     background-position: center;
     margin-bottom: 28px;
@@ -391,7 +405,7 @@ nav .menu {
     position: relative;
     height: 450px;
     width: 443px;
-    background-color: #F5E41B;
+    /* background-color: #F5E41B; */
     object-fit: cover;
     background-position: center;
     margin-bottom: 28px;
@@ -401,19 +415,41 @@ nav .menu {
     position: relative;
     height: 320px;
     width: 443px;
-    background-color: #F5E41B;
+    /* background-color: #F5E41B; */
     object-fit: cover;
     background-position: center;
     margin-bottom: 28px;
+}
+
+.page3_bottom{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page3_bottom h4{
+    font-family: "nav_font";
+    text-transform: uppercase;
+    font-size: 1.3vw;
+}
+
+
+.page3_bottom i{
+    font-family: "nav_font";
+    text-transform: uppercase;
+    font-size: 2vw;
 }
 
 
 
 
 
-
 .page4 {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: #ae2222;
     padding: 30px 28px;
@@ -565,4 +601,54 @@ nav .menu {
         font-size: 8vw;
     }
 
+    /* page3 */
+
+    .hero{
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgall{
+        height: 96%;
+        width: 96%;
+        object-fit: cover;
+        background-position: center;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+
+.imagebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 0.5vh;
+}
+
+.imagebox1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 0.5vh;
+}
+
+.imagebox2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 0.5vh;
+}
+
+.page3_bottom i{
+    font-size: 5vw;
+}
+
+.page3_bottom h4{
+    font-size: 2.5vw;
+}
+
+    
 }
