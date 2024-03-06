@@ -1,22 +1,16 @@
 @font-face {
-    font-family: main;
-    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light.ttf);
+    font-family: "mainfont";
+    src: url(../fonts/Freight\ Big\ Pro\ Light.ttf);
 }
 
 @font-face {
-    font-family: mainli;
-    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light.ttf);
-}
-
-
-@font-face {
-    font-family: mainit;
-    src: url(../locomotives/fonts/Freight\ Big\ Pro\ Light\ Italic.ttf);
+    font-family: "mainfont_it";
+    src: url(../fonts/Freight\ Big\ Pro\ Light\ Italic.ttf);
 }
 
 @font-face {
-    font-family: light;
-    src: url(../locomotives/fonts/nav-font/NHaasGroteskTXPro-55Rg.ttf);
+    font-family: "nav_font";
+    src: url(../fonts/nav-font/NHaasGrotesk55Rg.ttf);
 }
 
 * {
@@ -28,7 +22,6 @@ html,body{
     height: 100%;
     width : 100%;
 }   
-
 
 /* loder page */
 
@@ -50,7 +43,7 @@ html,body{
     height: 100%;
     width: 100%;
     background-color: #F5E41B;
-    z-index: 10;
+    z-index: 9;
 }
 
 .loder video{
@@ -58,24 +51,24 @@ html,body{
     width: 100%;
     position: absolute;
     object-fit: cover ;
-    z-index: 8;
+    z-index: 7;
 }
 
 
 .loder h1{
     position: absolute ;
-    font-family: main;
+    font-family: "mainfont";
     color: white;
     font-size: 7vw;
     font-weight: 300;
     line-height: 5vw;
     text-align: center;
     letter-spacing: -3px;
-    z-index: 9;
+    z-index: 8;
 }
 
 .loder em{
-    font-family: mainit;
+    font-family: "mainfont_it";
 }
 
 /* navbar */
@@ -108,7 +101,7 @@ nav .menu{
 }
 
 .menu a{
-    font-family: light;
+    font-family: "nav_font";
     font-size: 1.2vw;
     text-transform: uppercase;
     text-decoration: none;
@@ -125,12 +118,18 @@ nav .menu{
     display: none;
 }
 
+
+
+
+
+
 /* page1 of site */
 
 
 .page1{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    position: relative;
     background-color: #F5E41B;
     display: flex;
     flex-direction: column;
@@ -139,7 +138,7 @@ nav .menu{
 }
 
 .page1 h1{
-    font-family: main;
+    font-family: "mainfont";
     font-size: 7vw;
     font-weight: 300;
     line-height: 5vw;
@@ -148,21 +147,24 @@ nav .menu{
 }
 
 .page1 em{
-    font-family: mainit;
+    font-family: "mainfont_it";
 }
 
 .bottom {
+    z-index: 8;
     position: absolute;
     width: 100%;
     padding-inline: 60px ;
     bottom: 27px;
+    cursor: pointer;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .bottom h5{
-    font-family: light;
+    font-family: "nav_font";
     font-size: 1vw;
     text-transform: uppercase;
 }
@@ -175,27 +177,26 @@ nav .menu{
 }
 
 
-
 /* page2 of site */
 
 
 .page2{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    /* position:relative; */
+    background-color: #000000;
     
 }
 
 
 
+.page3{
+    height: 100vh;
+    width: 100%;
 
-
-
-
-
-
-
-
-
+    background-color: #ffffff;
+    
+}
 
 
 
@@ -212,120 +213,120 @@ nav .menu{
 @media (max-width:600px) {
     
 
-.loder h1{
-    position: absolute ;
-    font-family: mainli;
-    color: white;
-    font-size: 5.5vh;
-    font-weight: 300;
-    line-height: 4vh;
-    text-align: center;
-    letter-spacing: -3px;
-    z-index: 9;
-    padding: 60px 30px;
-}
-
-.loder em{
-    font-family: mainit;
-}
-
-
-
-/* navbar */
-nav {
-    position: absolute;
-    height: 10%;
-    width: 100%;
-    padding: 1vh 4vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9;
-
-}
-
-.logo svg{
-    height: 5vmax;
-    width: 7vmax;
-    fill:#ffffff
-}
-
-nav .menu{
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* z-index: ; */
-}
-
-.menu a{
-    display: none;
-}
-
-.menu i{
-    font-size: 5vw;
-    color: white;
-}
-
-
-.ri-add-line {
-    display: block;
-}
-
-.ri-close-large-line {
-    display: none;
-}
-
-
-/* page1 of site */
-
-
-.page1{
-    height: 100vh;
-    width: 100vw;
-    background-color: #F5E41B;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.page1 h1{
-    padding: 60px 30px;
-    font-family: mainli;
-    font-size: 5.5vh;
-    /* font-weight: 100; */
-    line-height: 4vh;
-    text-align: center;
-    letter-spacing: -3px;
-}
-
-.page1 em{
-    font-family: mainit;
-}
-
-
-.bottom {
-    position: absolute;
-    width: 100%;
-    padding-inline: 30px ;
-    bottom: 27px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bottom h5{
-    font-family: light;
-    font-weight: 50;
-    font-size: 3.5vw;
-    text-transform: uppercase;
-}
-
-.bottom button{
-    font-size: 7vw;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-}
+    .loder h1{
+        position: absolute ;
+        font-family: "mainfont";
+        color: white;
+        font-size: 5.5vh;
+        font-weight: 300;
+        line-height: 4vh;
+        text-align: center;
+        letter-spacing: -3px;
+        z-index: 9;
+        padding: 60px 30px;
+    }
+    
+    .loder em{
+        font-family: "mainfont_it";
+    }
+    
+    
+    
+    /* navbar */
+    nav {
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        padding: 1vh 4vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9;
+    
+    }
+    
+    .logo svg{
+        height: 5vmax;
+        width: 7vmax;
+        fill:#ffffff
+    }
+    
+    nav .menu{
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* z-index: ; */
+    }
+    
+    .menu a{
+        display: none;
+    }
+    
+    .menu i{
+        font-size: 5vw;
+        color: white;
+    }
+    
+    
+    .ri-add-line {
+        display: block;
+    }
+    
+    .ri-close-large-line {
+        display: none;
+    }
+    
+    
+    /* page1 of site */
+    
+    
+    .page1{
+        height: 100vh;
+        width: 100vw;
+        background-color: #F5E41B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .page1 h1{
+        padding: 60px 30px;
+        font-family: "mainfont";
+        font-size: 5.5vh;
+        /* font-weight: 100; */
+        line-height: 4vh;
+        text-align: center;
+        letter-spacing: -3px;
+    }
+    
+    .page1 em{
+        font-family: "mainfont_it";
+    }
+    
+    
+    .bottom {
+        position: absolute;
+        width: 100%;
+        padding-inline: 30px ;
+        bottom: 27px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .bottom h5{
+        font-family: "nav_font";
+        font-weight: 50;
+        font-size: 3.5vw;
+        text-transform: uppercase;
+    }
+    
+    .bottom button{
+        font-size: 7vw;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    }
