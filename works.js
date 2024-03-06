@@ -1,6 +1,5 @@
 
 // javascrip file code
-
 function lodepage() {
     var t1 = gsap.timeline();
 
@@ -56,12 +55,12 @@ function lodepage() {
 }
 lodepage()
 
-// locomotive + scrolltrigger
 
+// locomotive + scrolltrigger
 function locoscr() {
     gsap.registerPlugin(ScrollTrigger);
 
-    const locoScroll = new LocomotiveScroll({
+    const loco = new LocomotiveScroll({
         el: document.querySelector(".main"),
         smooth: true,
 
@@ -71,13 +70,13 @@ function locoscr() {
         // for mobile
         smartphone: { smooth: true }
     });
-    locoScroll.on("scroll", ScrollTrigger.update);
+    loco.on("scroll", ScrollTrigger.update);
 
     ScrollTrigger.scrollerProxy(".main", {
         scrollTop(value) {
             return arguments.length
-                ? locoScroll.scrollTo(value, 0, 0)
-                : locoScroll.scroll.instance.scroll.y;
+                ? loco.scrollTo(value, 0, 0)
+                : loco.scroll.instance.scroll.y;
         },
         getBoundingClientRect() {
             return {
@@ -96,66 +95,100 @@ function locoscr() {
     });
 
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.addEventListener("refresh", () => loco.update());
 
     ScrollTrigger.refresh();
 
 }
 locoscr()
 
-// image effect in page 2
 
-function page2img(){
+// image effect in page 2
+function page2img() {
     var ele = document.querySelectorAll(".elem")
     var bg = document.querySelector(".page2")
     ele.forEach(function (el) {
-    el.addEventListener("mouseenter", () => {
-        var images = el.getAttribute("data-img");
-        bg.style.backgroundImage = `url(${images})`;
+        el.addEventListener("mouseenter", () => {
+            var images = el.getAttribute("data-img");
+            bg.style.backgroundImage = `url(${images})`;
+        })
     })
-})
 }
 page2img()
 
-// page2 nav change
 
-function navchange_color(){
+// page2 nav change
+function navchange_color() {
     var t2 = gsap.timeline({
         scrollTrigger: {
-          trigger: "nav",
-          scroller: ".main",
-        //   markers:true,
-          start: "top -100%",
-          scrub: 1
+            trigger: "nav",
+            scroller: ".main",
+            //   markers:true,
+            start: "top -100%",
+            scrub: 1
         }
-      })
-    
-    t2.to(".logo svg",{
-        fill:"#ffffff"
-    },'time')
-    
-    t2.to(".menu a,.menu i",{
-        color:"#ffffff"
-    },'time')
-    
-    
+    })
+
+    t2.to(".logo svg", {
+        fill: "#ffffff"
+    }, 'time')
+
+    t2.to(".menu a,.menu i", {
+        color: "#ffffff"
+    }, 'time')
+
+
     var t3 = gsap.timeline({
         scrollTrigger: {
-          trigger: "nav",
-          scroller: ".main",
-        //   markers:true,
-          start: "top -185%",
-          scrub: 1
+            trigger: "nav",
+            scroller: ".main",
+            //   markers:true,
+            start: "top -185%",
+            scrub: 1
         }
-      })
-    
-    t3.to(".logo svg",{
-        fill:"#000000"
-    },'time')
-    
-    t3.to(".menu a,.menu i",{
-        color:"#000000"
-    },'time')
-    
+    })
+
+    t3.to(".logo svg", {
+        fill: "#000000"
+    }, 'time')
+
+    t3.to(".menu a,.menu i", {
+        color: "#000000"
+    }, 'time')
+
 }
 navchange_color()
+
+
+// locomotive BacktoTop
+function BacktoTop() {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('.main'),
+        smooth: true
+    });
+
+    var top_but = document.querySelector(".page3_bottom");
+    top_but.addEventListener("click", () => {
+        scroll.scrollTo(0);
+    })
+}
+BacktoTop();
+
+
+// #bakgroud colore of main
+function backgroung() {
+    var t3 = gsap.timeline();
+
+    t3.to(".main", {
+        backgroundColor: "black",
+        scrollTrigger: {
+            trigger: ".main",
+            scroller: ".main",
+            //   markers:true,
+            start: "top -100%",
+            scrub: 1
+        }
+    })
+}
+backgroung();
+
