@@ -63,3 +63,13 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+// image effect in page 2
+
+var ele = document.querySelectorAll(".elem")
+var bg = document.querySelector(".page2")
+ele.forEach(function(el){
+    el.addEventListener("mouseenter",()=>{
+        var images = el.getAttribute("data-img");
+        bg.style.backgroundImage = `url(${images})`;
+    })
+})
