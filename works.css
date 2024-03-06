@@ -18,16 +18,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
-    width : 100%;
-}   
+    width: 100%;
+}
 
 /* loder page */
 
 
 
-.loder{
+.loder {
     height: 100vh;
     width: 100%;
     background-color: black;
@@ -38,7 +40,7 @@ html,body{
     align-items: center;
 }
 
-.background{
+.background {
     position: relative;
     height: 100%;
     width: 100%;
@@ -46,17 +48,17 @@ html,body{
     z-index: 9;
 }
 
-.loder video{
+.loder video {
     height: 100%;
     width: 100%;
     position: absolute;
-    object-fit: cover ;
+    object-fit: cover;
     z-index: 7;
 }
 
 
-.loder h1{
-    position: absolute ;
+.loder h1 {
+    position: absolute;
     font-family: "mainfont";
     color: white;
     font-size: 7vw;
@@ -67,7 +69,7 @@ html,body{
     z-index: 8;
 }
 
-.loder em{
+.loder em {
     font-family: "mainfont_it";
 }
 
@@ -86,13 +88,13 @@ nav {
 
 }
 
-.logo svg{
+.logo svg {
     height: 4vmax;
     width: 7vmax;
-    fill:#ffffff
+    fill: #ffffff
 }
 
-nav .menu{
+nav .menu {
     width: 40%;
     display: flex;
     justify-content: space-around;
@@ -100,16 +102,16 @@ nav .menu{
     /* z-index: ; */
 }
 
-.menu a{
+.menu a {
     font-family: "nav_font";
     font-size: 1.2vw;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 100;
-    color:white;
+    color: white;
 }
 
-.menu i{
+.menu i {
     font-size: 2vw;
     color: white;
 }
@@ -126,7 +128,7 @@ nav .menu{
 /* page1 of site */
 
 
-.page1{
+.page1 {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -137,7 +139,7 @@ nav .menu{
     align-items: center;
 }
 
-.page1 h1{
+.page1 h1 {
     font-family: "mainfont";
     font-size: 7vw;
     font-weight: 300;
@@ -146,7 +148,7 @@ nav .menu{
     letter-spacing: -3px;
 }
 
-.page1 em{
+.page1 em {
     font-family: "mainfont_it";
 }
 
@@ -154,7 +156,7 @@ nav .menu{
     z-index: 8;
     position: absolute;
     width: 100%;
-    padding-inline: 60px ;
+    padding-inline: 60px;
     bottom: 27px;
     cursor: pointer;
     color: #ffffff;
@@ -163,13 +165,13 @@ nav .menu{
     align-items: center;
 }
 
-.bottom h5{
+.bottom h5 {
     font-family: "nav_font";
     font-size: 1vw;
     text-transform: uppercase;
 }
 
-.bottom button{
+.bottom button {
     font-size: 3vw;
     border: 0;
     background-color: transparent;
@@ -180,22 +182,22 @@ nav .menu{
 /* page2 of site */
 
 
-.page2{
+.page2 {
     height: 100vh;
     width: 100%;
     /* position:relative; */
     background-color: #000000;
-    
+
 }
 
 
 
-.page3{
+.page3 {
     height: 100vh;
     width: 100%;
 
     background-color: #ffffff;
-    
+
 }
 
 
@@ -211,10 +213,10 @@ nav .menu{
 
 
 @media (max-width:600px) {
-    
 
-    .loder h1{
-        position: absolute ;
+
+    .loder h1 {
+        position: absolute;
         font-family: "mainfont";
         color: white;
         font-size: 5.5vh;
@@ -225,13 +227,13 @@ nav .menu{
         z-index: 9;
         padding: 60px 30px;
     }
-    
-    .loder em{
+
+    .loder em {
         font-family: "mainfont_it";
     }
-    
-    
-    
+
+
+
     /* navbar */
     nav {
         position: absolute;
@@ -242,46 +244,46 @@ nav .menu{
         justify-content: space-between;
         align-items: center;
         z-index: 9;
-    
+
     }
-    
-    .logo svg{
+
+    .logo svg {
         height: 5vmax;
         width: 7vmax;
-        fill:#ffffff
+        fill: #ffffff
     }
-    
-    nav .menu{
+
+    nav .menu {
         width: 40%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         /* z-index: ; */
     }
-    
-    .menu a{
+
+    .menu a {
         display: none;
     }
-    
-    .menu i{
+
+    .menu i {
         font-size: 5vw;
         color: white;
     }
-    
-    
+
+
     .ri-add-line {
         display: block;
     }
-    
+
     .ri-close-large-line {
         display: none;
     }
-    
-    
+
+
     /* page1 of site */
-    
-    
-    .page1{
+
+
+    .page1 {
         height: 100vh;
         width: 100vw;
         background-color: #F5E41B;
@@ -289,8 +291,8 @@ nav .menu{
         justify-content: center;
         align-items: center;
     }
-    
-    .page1 h1{
+
+    .page1 h1 {
         padding: 60px 30px;
         font-family: "mainfont";
         font-size: 5.5vh;
@@ -299,34 +301,34 @@ nav .menu{
         text-align: center;
         letter-spacing: -3px;
     }
-    
-    .page1 em{
+
+    .page1 em {
         font-family: "mainfont_it";
     }
-    
-    
+
+
     .bottom {
         position: absolute;
         width: 100%;
-        padding-inline: 30px ;
+        padding-inline: 30px;
         bottom: 27px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .bottom h5{
+
+    .bottom h5 {
         font-family: "nav_font";
         font-weight: 50;
         font-size: 3.5vw;
         text-transform: uppercase;
     }
-    
-    .bottom button{
+
+    .bottom button {
         font-size: 7vw;
         border: 0;
         background-color: transparent;
         cursor: pointer;
     }
-    
-    }
+
+}
