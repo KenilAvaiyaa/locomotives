@@ -160,7 +160,7 @@ function navchange_color() {
 navchange_color()
 
 
-// locomotive BacktoTop
+// locomotive button which move one page to another page
 function BacktoTop() {
     const scroll = new LocomotiveScroll({
         el: document.querySelector('.main'),
@@ -171,6 +171,19 @@ function BacktoTop() {
     top_but.addEventListener("click", () => {
         scroll.scrollTo(0);
     })
+
+    var page1button = document.querySelector(".page1 .bottom button");
+    page1button.addEventListener('click', () => {
+        // scroll.scrollTo(document.querySelector(`.page2`).offsetTop);
+        scroll.scrollTo(0, 817);
+    }
+    )
+    var page1button = document.querySelector(".page2 button");
+    page1button.addEventListener('click', () => {
+        scroll.scrollTo(document.querySelector(`.page3`).offsetTop);
+        // scroll.scrollTo(0,1635);
+    })
+
 }
 BacktoTop();
 
@@ -191,4 +204,6 @@ function backgroung() {
     })
 }
 backgroung();
+
+
 
