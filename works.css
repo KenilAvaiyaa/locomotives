@@ -1,16 +1,16 @@
 @font-face {
     font-family: "mainfont";
-    src: url(Freight\ Big\ Pro\ Light.ttf)format(truetype);
+    src: url(../Freight\ Big\ Pro\ Light.ttf)format("opentype");
 }
 
 @font-face {
     font-family: "mainfont_it";
-    src: url(Freight\ Big\ Pro\ Light\ Italic.ttf)format(truetype);
+    src: url(../Freight\ Big\ Pro\ Light\ Italic.ttf)format("opentype");
 }
 
 @font-face {
     font-family: "nav_font";
-    src: url(NHaasGrotesk55Rg.ttf)format(truetype);
+    src: url(../NHaasGrotesk55Rg.ttf)format("opentype");
 }
 
 * {
