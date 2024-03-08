@@ -1,16 +1,16 @@
 @font-face {
     font-family: "mainfont";
-    src: url(../fonts/Freight\ Big\ Pro\ Light.ttf);
+    src: url(../fonts/Freight\ Big\ Pro\ Light.ttf)format(truetype);
 }
 
 @font-face {
     font-family: "mainfont_it";
-    src: url(../fonts/Freight\ Big\ Pro\ Light\ Italic.ttf);
+    src: url(../fonts/Freight\ Big\ Pro\ Light\ Italic.ttf)format(truetype);
 }
 
 @font-face {
     font-family: "nav_font";
-    src: url(../fonts/nav-font/NHaasGrotesk55Rg.ttf);
+    src: url(../fonts/NHaasGrotesk55Rg.ttf)format(truetype);
 }
 
 * {
@@ -99,17 +99,36 @@ nav .menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
     /* z-index: ; */
 }
 
-.menu a {
+.menu h4 {
     font-family: "nav_font";
     font-size: 1.2vw;
     text-transform: uppercase;
-    text-decoration: none;
+    /* text-decoration: none; */
     font-weight: 100;
     color: white;
 }
+
+h4 .nav_right::after{
+    content: "";
+    position: absolute;
+    z-index: 8;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2vh;
+    background-color: black;
+    transform: scale(0);
+    transition: all ease 0.5s;
+}
+
+h4 .nav_right:hover::after{
+    transform: scale(1);
+}
+
 
 .menu i {
     font-size: 2vw;

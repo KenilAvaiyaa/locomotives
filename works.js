@@ -30,7 +30,7 @@ function lodepage() {
         ease: "power4.out"
     }, 'a')
 
-    t1.to(".menu a,.menu i", {
+    t1.to(".menu h4,.menu i", {
         color: "black",
         delay: 0.5,
         duration: 1,
